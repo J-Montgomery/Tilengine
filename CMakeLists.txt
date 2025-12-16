@@ -5,6 +5,7 @@ project(Tilengine)
 
 file(GLOB SOURCES
      "src/*.c"
+     "utils/*.c"
 )
 
 
@@ -25,7 +26,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE "png")
 find_package(SDL2 REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE ${SDL2_LIBRARIES})
 
-target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME} PRIVATE include utils)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -O2 -fpic -DLIB_EXPORTS")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-unused-result -Wno-format-truncation")
