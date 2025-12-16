@@ -79,5 +79,10 @@ add_executable(forest
 add_executable(querylayer
      QueryLayer.c)
 
+add_executable(layercircle
+     LayerCircle.c)
+
+add_executable(layerwindow
+     LayerWindow.c)
 
 
