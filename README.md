@@ -73,7 +73,7 @@ Path | Files
 **NOTE**: If you're having problems setting up these dependencies, you can download them already pre-packaged from [itch.io downloads](https://megamarc.itch.io/tilengine), file is `windows_libs.zip`. It contains headers and libraries for both 32 and 64 bit platforms.
 
 ### Debian-based linux
-Just install standard packages `libpng-dev` and `libsdl2-dev`
+Just install standard packages `libpng-dev`, `libsdl2-dev`, and `libzlib1g-dev`
 
 ### MacOS
 

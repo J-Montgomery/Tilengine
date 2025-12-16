@@ -1,6 +1,7 @@
 # misc
 .svn/
 .vs/
+bin/
 map2tileset/
 test/
 Thumbs.db
