@@ -19,6 +19,16 @@ elseif (UNIX AND APPLE)
     target_link_libraries(${PROJECT_NAME} PRIVATE "framework")
 endif()
 
+if(ENABLE_UBSAN)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-omit-frame-pointer -fsanitize=undefined")
+    set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} -fno-omit-frame-pointer -fsanitize=undefined")
+endif()
+
+if(ENABLE_ASAN)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-omit-frame-pointer -fsanitize=address")
+    set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} -fno-omit-frame-pointer -fsanitize=address")
+endif()
+
 target_link_libraries(${PROJECT_NAME} PRIVATE "c")
 target_link_libraries(${PROJECT_NAME} PRIVATE "z")
 target_link_libraries(${PROJECT_NAME} PRIVATE "png")
